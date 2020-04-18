@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic</title>
+    <script src="funcs.js"></script>
+</head>
+<body>
+<p id = "topicDescr"></p>
+<button onclick="openTopic(parseInt(topicNr)-1)">пред. тема</button>
+<button onclick="openTopic(parseInt(topicNr)+1)">след. тема</button>
+<p id = "status" style="color:red"></p>
+
+<script>
+    var topicNr = window.sessionStorage.getItem("topicNr");
+    document.getElementById("topicDescr").innerHTML = "здесб будет тема " + topicNr;
+    window.document.title = "Topic " + topicNr;
+</script>
+<script src = "response.js"></script>
+
+</body>
+</html>
